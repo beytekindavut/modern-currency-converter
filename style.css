@@ -1,0 +1,121 @@
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #1d3557, #457b9d);
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    color: #fff;
+}
+
+#container {
+    display: grid;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    width: 100%;
+    max-width: 500px;
+    backdrop-filter: blur(8px);
+}
+
+.header-wrapper {
+    text-align: center;
+}
+
+.header-wrapper h4 {
+    font-size: 1.6rem;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 10px;
+    align-items: center;
+}
+
+input, select {
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+input:focus, select:focus {
+    box-shadow: 0 0 8px rgba(255,255,255,0.7);
+}
+
+i.fa-arrow-right {
+    font-size: 1.5rem;
+    color: #ffd166;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+i.fa-arrow-right:hover {
+    transform: rotate(180deg);
+}
+
+/* Swap butonu */
+#swapBtn {
+    background: linear-gradient(135deg, #ffd166, #ff9f1c);
+    border: none;
+    color: #1d3557;
+    font-size: 1rem;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#swapBtn:hover {
+    background: linear-gradient(135deg, #ff9f1c, #ffd166);
+}
+
+#result {
+    background-color: rgba(255,255,255,0.2);
+    color: #fff;
+    text-align: center;
+}
+
+span {
+    text-align: center;
+    display: block;
+    font-size: 0.9rem;
+    color: #f1faee;
+}
+
+
+
+#status {
+    text-align: center;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    color: #ffd166;
+}
+
+/* Loading animasyonu */
+.loading {
+    animation: blink 0.8s infinite alternate;
+}
+
+
+
+@keyframes blink {
+    from { opacity: 1; }
+    to { opacity: 0.3; }
+}
+
+@media (max-width: 480px) {
+    .content-wrapper {
+        grid-template-columns: 1fr;
+    }
+    i.fa-arrow-right {
+        transform: rotate(90deg);
+        text-align: center;
+    }
+}
